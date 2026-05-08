@@ -1,0 +1,47 @@
+.container {
+    background-color: white;
+    padding: 40px 10px;
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 10px rgb(197, 195, 195);
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.inputContainer {
+    width: 90%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 75% 25%;
+    gap: 10px;
+
+}
+
+.input {
+    padding: 10px;
+    border-radius: 7px;
+    border: 1.5px solid rgb(197, 195, 195);
+    background-color: rgb(243, 243, 243);
+    color: rgb(20, 11, 80);
+}
+
+.button {
+    border: none;
+    background-color: rgb(243, 243, 243);
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+
+.button:hover {
+    background-color: rgb(89, 160, 236);
+}

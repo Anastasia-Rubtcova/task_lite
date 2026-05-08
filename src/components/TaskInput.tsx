@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 import { useState } from 'react';
 import { makeTask } from '../utils/makeTask';
+import cls from './TaskInput.module.css'
 
-const Title = styled.h1`
-color: ${p => p.theme.colors.error};
-margin: ${p => p.theme.spacing(3.5)};
-`
+// const Title = styled.h1`
+// color: ${p => p.theme.colors.error};
+// margin: ${p => p.theme.spacing(3.5)};
+// `
 
 export function TaskInput() {
     const [textInput, setTextInput] = useState('');
@@ -38,9 +39,10 @@ export function TaskInput() {
     // const randomId = Math.random().toString(36).substring(2)
     // console.log(randomId)
     return (
-        <div>
-            <Title>TasksPage</Title>
-            <input
+        <div className={cls.container}>
+            <h1 className={cls.title}>TaskLite</h1>
+            <div className={cls.inputContainer}>
+            <input className={cls.input}
                 onChange={event => {
                     setTextInput(event.target.value);
                 }}
@@ -48,14 +50,14 @@ export function TaskInput() {
                 value={textInput}
                 placeholder="Введите задачу"
             />
+            <button className={cls.button} onClick={() => showError()}>Добавить</button>
+            </div>
             {error && <div> {error} </div>}
             <ul>
                 {tasks.map(task => (
                     <li key={task.id} > {task.title} </li>
-                    // <li key={Math.random().toString(36).substring(2)}> {task} </li>
-
                 ))}
             </ul>
-            <button onClick={() => showError()}>Добавить</button>
+        
         </div>);
 }
