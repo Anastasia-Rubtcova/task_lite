@@ -1,0 +1,18 @@
+.container {
+    background-color: white;
+    padding: 40px 10px 10px;
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 10px rgb(197, 195, 195);
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
